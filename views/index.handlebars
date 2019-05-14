@@ -1,0 +1,48 @@
+<div class="text-center">
+	<div class="bg-secondary"><h1>Burgers</h1></div>
+</div>
+<div class="text-center">
+	<div class="form-group">
+		<form action="/burgers/create" method="POST">
+			<input type="text" name="burgername" value="" placeholder="Burger you want to eat!">
+			<button type="submit" id="submit-burger-btn" class="btn btn-danger">Submit Burger</button>
+		</form>
+	</div>
+</div>
+
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col">
+				<div class="text-center">
+					<h2>Burgers not eaten!</h2>
+				</div>
+				<ul>
+					{{#each burger_obj}}
+					{{#unless this.devoured}}
+					<p>{{this.id}}. {{this.burger_name}}
+						<button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
+							data-newDevoured="{{devour}}">Eat Me! <i class="fas fa-hamburger"></i></button></p>
+					<hr>
+					{{/unless}}
+					{{/each}}
+				</ul>
+			</div>
+
+			<hr>
+			<div class="col">
+				<div class="text-center">
+					<h2>Burgers eaten!</h2>
+				</div>
+				<ul>
+					{{#each burger_obj}}
+					{{#if this.devoured}}
+					<p><i class="fas fa-utensils"></i> {{this.id}} {{this.burger_name}}</p>
+					<hr>
+					{{/if}}
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

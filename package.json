@@ -1,0 +1,25 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger eating app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbyron13/burger.git"
+  },
+  "author": "Mike B",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbyron13/burger/issues"
+  },
+  "homepage": "https://github.com/mbyron13/burger#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.17.1"
+  }
+}
